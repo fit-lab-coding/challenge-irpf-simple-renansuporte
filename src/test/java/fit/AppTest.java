@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import fit.core.IrpfCalculator;
+import fit.core.IprfCalculator;
 
 /**
  * Unit test for simple App.
@@ -22,7 +22,7 @@ public class AppTest
         var totalSalary = 3000.00;
         var baseSalaryExpected = 2670.00;
         // act
-        var actualBaseSalary = IrpfCalculator.calculateBaseSalary(totalSalary);
+        var actualBaseSalary = IprfCalculator.calculateBaseSalary(totalSalary);
         // assert
         assertEquals(baseSalaryExpected, actualBaseSalary, 0.01);
     }
@@ -33,7 +33,7 @@ public class AppTest
         var exemptionValueExpected = 1903.98;
 
         // act
-        var actualExemptionValue = IrpfCalculator.calculateExemption();
+        var actualExemptionValue = IprfCalculator.calculateExemption();
 
         // assert
         assertEquals(exemptionValueExpected, actualExemptionValue, 0.01);
@@ -46,7 +46,7 @@ public class AppTest
         var discountValueExpected = 766.02;
 
         // act
-        var actualDiscountValue = IrpfCalculator.calculateDiscount(baseSalary);
+        var actualDiscountValue = IprfCalculator.calculateDiscount(baseSalary);
 
         // assert
         assertEquals(discountValueExpected, actualDiscountValue, 0.01);
@@ -59,7 +59,7 @@ public class AppTest
         var taxLayerExpected = 0.075;
 
         // act
-        var actualTaxLayex = IrpfCalculator.calculateTaxLayer(baseSalary);
+        var actualTaxLayex = IprfCalculator.calculateTaxLayer(baseSalary);
 
         // assert
         assertEquals(actualTaxLayex, taxLayerExpected, 0.01);
@@ -72,7 +72,7 @@ public class AppTest
         var irpfValueExpected = 57.45;
 
         // act
-        var actualIrpfValue = IrpfCalculator.calculateIrpf(totalSalary);
+        var actualIrpfValue = IprfCalculator.calculateIrpf(totalSalary);
 
         // assert
         assertEquals(actualIrpfValue, irpfValueExpected, 0.01);
